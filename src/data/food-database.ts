@@ -45,6 +45,20 @@ export const commonFoods: FoodItem[] = [
   createFoodItem('Kichererbsen', 364, 15, 61, 6, 100),
   createFoodItem('Tofu', 76, 8, 1.9, 4.8, 100),
   createFoodItem('Hafermilch', 46, 1.4, 6.6, 1.5, 100, 'ml', 'Oatly'),
+  createFoodItem('Karotten', 41, 0.9, 10, 0.2, 100),
+  createFoodItem('Spinat', 23, 2.9, 3.6, 0.4, 100),
+  createFoodItem('Paprika', 31, 1, 6, 0.3, 100),
+  createFoodItem('Tomaten', 18, 0.9, 3.9, 0.2, 100),
+  createFoodItem('Orange', 47, 0.9, 12, 0.1, 100),
+  createFoodItem('Beeren', 57, 0.7, 14, 0.3, 100),
+  createFoodItem('Kiwi', 61, 1.1, 15, 0.5, 100),
+  createFoodItem('Butter', 717, 0.9, 0.1, 81, 100),
+  createFoodItem('Avocado', 160, 2, 8.5, 14.7, 100),
+  createFoodItem('Erdnussbutter', 588, 25, 20, 50, 100),
+  createFoodItem('Leinsamen', 534, 18, 29, 42, 100),
+  createFoodItem('Chia Samen', 486, 17, 42, 31, 100),
+  createFoodItem('Hüttenkäse', 98, 11, 3.4, 4.3, 100),
+  createFoodItem('Schwarze Bohnen', 341, 21, 62, 1.4, 100),
 ];
 
 export function searchLocalFoods(query: string): FoodItem[] {

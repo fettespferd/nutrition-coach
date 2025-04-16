@@ -131,16 +131,18 @@ export default function FoodSearch({ onSelect }: FoodSearchProps) {
             </button>
           </div>
 
-          <div className="flex justify-between items-center">
-            <AmountSelector
-              amount={amount}
-              unit={selectedFood.servingUnit || 'g'}
-              onChange={setAmount}
-            />
+          <div className="flex flex-col gap-3 items-center mb-4">
+            <div className="w-full">
+              <AmountSelector
+                amount={amount}
+                unit={selectedFood.servingUnit || 'g'}
+                onChange={setAmount}
+              />
+            </div>
             <button
               onClick={handleAmountConfirm}
               className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 
-                       transition-colors"
+                       transition-colors w-full"
             >
               Hinzufügen
             </button>
@@ -150,25 +152,25 @@ export default function FoodSearch({ onSelect }: FoodSearchProps) {
             <div className="space-y-1">
               <p className="text-gray-600">Kalorien</p>
               <p className="font-medium">
-                {((selectedFood.nutrients.calories.amount * amount) / 100).toFixed(1)} kcal
+                {((selectedFood.nutrients.calories.amount * amount) / 100).toFixed(2)} kcal
               </p>
             </div>
             <div className="space-y-1">
               <p className="text-gray-600">Protein</p>
               <p className="font-medium">
-                {((selectedFood.nutrients.protein.amount * amount) / 100).toFixed(1)}g
+                {((selectedFood.nutrients.protein.amount * amount) / 100).toFixed(2)}g
               </p>
             </div>
             <div className="space-y-1">
               <p className="text-gray-600">Kohlenhydrate</p>
               <p className="font-medium">
-                {((selectedFood.nutrients.carbohydrates.amount * amount) / 100).toFixed(1)}g
+                {((selectedFood.nutrients.carbohydrates.amount * amount) / 100).toFixed(2)}g
               </p>
             </div>
             <div className="space-y-1">
               <p className="text-gray-600">Fett</p>
               <p className="font-medium">
-                {((selectedFood.nutrients.fat.amount * amount) / 100).toFixed(1)}g
+                {((selectedFood.nutrients.fat.amount * amount) / 100).toFixed(2)}g
               </p>
             </div>
           </div>

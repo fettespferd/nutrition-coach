@@ -34,7 +34,7 @@ function MealSection({ title, items, mealType, onRemove }: MealSectionProps) {
     <div className="space-y-2">
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-medium text-gray-900">{title}</h3>
-        <span className="text-sm text-gray-500">{Math.round(totalCalories)} kcal</span>
+        <span className="text-sm text-gray-500">{totalCalories.toFixed(2)} kcal</span>
       </div>
       {items.length === 0 ? (
         <p className="text-gray-500 text-sm">Keine Einträge</p>
@@ -48,7 +48,7 @@ function MealSection({ title, items, mealType, onRemove }: MealSectionProps) {
               <div>
                 <div className="font-medium">{item.name}</div>
                 <div className="text-sm text-gray-500">
-                  {getItemServingInfo(item)} • {Math.round(getItemCalories(item))} kcal
+                  {getItemServingInfo(item)} • {getItemCalories(item).toFixed(2)} kcal
                 </div>
               </div>
               <button

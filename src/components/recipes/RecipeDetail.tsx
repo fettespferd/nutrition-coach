@@ -70,10 +70,10 @@ export function RecipeDetail({ recipe, onAddToFavorites, onAddToMeal }: RecipeDe
             </CardHeader>
             <CardContent className="p-4 pt-0">
               <div className="space-y-2">
-                <p>Kalorien: {Math.round(recipe.totalNutrients.calories / recipe.servings)} kcal</p>
-                <p>Protein: {Math.round(recipe.totalNutrients.protein / recipe.servings)}g</p>
-                <p>Kohlenhydrate: {Math.round(recipe.totalNutrients.carbohydrates / recipe.servings)}g</p>
-                <p>Fett: {Math.round(recipe.totalNutrients.fat / recipe.servings)}g</p>
+                <p>Kalorien: {(recipe.totalNutrients.calories / recipe.servings).toFixed(2)} kcal</p>
+                <p>Protein: {(recipe.totalNutrients.protein / recipe.servings).toFixed(2)}g</p>
+                <p>Kohlenhydrate: {(recipe.totalNutrients.carbohydrates / recipe.servings).toFixed(2)}g</p>
+                <p>Fett: {(recipe.totalNutrients.fat / recipe.servings).toFixed(2)}g</p>
               </div>
             </CardContent>
           </Card>

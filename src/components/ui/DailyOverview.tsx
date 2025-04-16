@@ -15,7 +15,7 @@ function ProgressBar({ current, target, label, color }: ProgressBarProps) {
     <div className="space-y-1">
       <div className="flex justify-between text-sm">
         <span>{label}</span>
-        <span>{current} / {target}</span>
+        <span>{current.toFixed(2)} / {target.toFixed(2)}</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
         <div
@@ -74,19 +74,19 @@ export default function DailyOverview() {
         <div className="grid grid-cols-3 gap-4 text-center">
           <div className="bg-gray-50 p-3 rounded">
             <div className="text-lg font-semibold text-red-500">
-              {Math.round((dailyNutrition.totalProtein * 4 / dailyNutrition.totalCalories) * 100 || 0)}%
+              {((dailyNutrition.totalProtein * 4 / dailyNutrition.totalCalories) * 100 || 0).toFixed(2)}%
             </div>
             <div className="text-sm text-gray-500">Protein</div>
           </div>
           <div className="bg-gray-50 p-3 rounded">
             <div className="text-lg font-semibold text-green-500">
-              {Math.round((dailyNutrition.totalCarbs * 4 / dailyNutrition.totalCalories) * 100 || 0)}%
+              {((dailyNutrition.totalCarbs * 4 / dailyNutrition.totalCalories) * 100 || 0).toFixed(2)}%
             </div>
             <div className="text-sm text-gray-500">Kohlenhydrate</div>
           </div>
           <div className="bg-gray-50 p-3 rounded">
             <div className="text-lg font-semibold text-yellow-500">
-              {Math.round((dailyNutrition.totalFat * 9 / dailyNutrition.totalCalories) * 100 || 0)}%
+              {((dailyNutrition.totalFat * 9 / dailyNutrition.totalCalories) * 100 || 0).toFixed(2)}%
             </div>
             <div className="text-sm text-gray-500">Fett</div>
           </div>
